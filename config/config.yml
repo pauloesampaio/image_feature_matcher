@@ -1,0 +1,26 @@
+paths:
+  images_dataframe_path: "./data/processed_subset.csv"
+  vectorizer_model_path: "./model/model.h5"
+  vectors_path: "./data/vectors.npy"
+  ann_index_path: "./model/ann_index.hnsw"
+
+dataframe:
+  path_field: "processed_path"
+  labels_field: None
+
+model:
+  layer_to_get_input: "print_clf"
+  input_size: [224, 224]
+  batch_size: 128
+
+ann_index:
+  init_time:
+    method: "hnsw"
+    space: "l2"
+  index_time:
+    M: 5
+    indexThreadQty: 4
+    efConstruction: 100
+  query_time:
+    efSearch: 100
+  k: 10
