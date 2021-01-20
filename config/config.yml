@@ -1,6 +1,6 @@
 paths:
   images_dataframe_path: "./data/full_data.csv"
-  vectorizer_model_path: "./model/model.h5"
+  trained_model_path: "./model/model.h5"
   vectors_path: "./data/vectors.npy"
   ann_index_path: "./model/ann_index.hnsw"
 

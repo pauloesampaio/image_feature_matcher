@@ -15,7 +15,7 @@ def build_model(config):
     Returns:
         keras.model: Vectorizer model
     """
-    model = load_model(config["paths"]["vectorizer_model_path"])
+    model = load_model(config["paths"]["trained_model_path"])
     model = Model(
         inputs=model.input,
         outputs=[model.get_layer(config["model"]["layer_to_get_input"]).input],

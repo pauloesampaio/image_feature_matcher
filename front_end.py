@@ -44,10 +44,10 @@ vectors = vectors_loader(config)
 st.write(
     """
 # Feature vector matcher
-## Enter the image index
+## Enter the image url
 """
 )
-url = st.text_input("Enter image url")
+url = st.text_input("Image url")
 
 if url:
     image = download_image(url)
