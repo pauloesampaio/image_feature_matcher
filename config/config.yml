@@ -1,11 +1,11 @@
 paths:
-  images_dataframe_path: "./data/processed_subset.csv"
+  images_dataframe_path: "./data/full_data.csv"
   vectorizer_model_path: "./model/model.h5"
   vectors_path: "./data/vectors.npy"
   ann_index_path: "./model/ann_index.hnsw"
 
 dataframe:
-  path_field: "processed_path"
+  path_field: "image_path"
   labels_field: None
 
 model:
