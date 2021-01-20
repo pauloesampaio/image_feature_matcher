@@ -61,9 +61,9 @@ if url:
                 images_dataframe.iloc[match_index][config["dataframe"]["path_field"]]
             )
         )
-        captions.append(f"Dist: {match_distance:.2e}")
+        captions.append(f"Dist: {match_distance:.2f}")
     col1, col2 = st.beta_columns(2)
     col1.write("# Original:")
-    col1.image(image=image, width=96)
+    col1.image(image=image, use_column_width=True)
     col2.write("# Matches")
-    col2.image(image=images, width=96, caption=captions)
+    col2.image(image=images, width=128, caption=captions)
