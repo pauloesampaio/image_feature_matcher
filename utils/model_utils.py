@@ -18,7 +18,7 @@ def build_model(config):
     model = load_model(config["paths"]["vectorizer_model_path"])
     model = Model(
         inputs=model.input,
-        outputs=[model.get_layer(config["model"]["layer_to_get_input"]).output],
+        outputs=[model.get_layer(config["model"]["layer_to_get_input"]).input],
     )
     return model
 
